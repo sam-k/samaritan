@@ -1,0 +1,13 @@
+#warning {
+  width: 100%;
+  padding: 0rem 12rem;
+  background-color: red;
+  width: auto;
+
+  /* font-weight: 400; */
+  }
+
+#warning--text {
+  color: white;
+  font-size: 1em;
+}
