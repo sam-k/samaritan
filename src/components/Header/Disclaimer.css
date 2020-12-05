@@ -1,0 +1,34 @@
+#disclaimer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  /* opacity: 1; */
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+  /* animation: show .5s ease; */
+}
+
+#disclaimer--window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  transform: translate(-50%,-50%);
+
+  padding: 2rem;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.disclaimer--button {
+  float: right;
+
+  padding: 0.5rem 1rem;
+}
