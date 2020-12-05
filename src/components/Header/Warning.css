@@ -4,10 +4,15 @@
   background-color: red;
   width: auto;
 
-  /* font-weight: 400; */
+  display: flex;
+  align-items: center;
   }
+
+#warning--logo {
+  color: white;
+  margin-right: 1rem;
+}
 
 #warning--text {
   color: white;
-  font-size: 1em;
 }

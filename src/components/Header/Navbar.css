@@ -6,11 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  /* align-items: center; */
   width: auto;
-
-  /* font-weight: 400; */
-  /* list-style: none; */
 }
 
 #navbar--logo {
