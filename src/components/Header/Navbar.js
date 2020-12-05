@@ -1,9 +1,11 @@
 import './Navbar.css';
+import logo from '../../logo.svg';
 
 function Navbar() {
   return (
     <nav id="navbar">
       <div id="navbar--logo">
+        <img src={ logo } />
         <h1>Samaritan</h1>
       </div>
       <ul id="navbar--links">

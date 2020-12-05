@@ -10,7 +10,18 @@
 }
 
 #navbar--logo {
+  display: flex;
+  align-items: center;
   margin-right: auto;
+}
+
+#navbar--logo img {
+  height: 8vmin;
+  margin-right: 0.5rem;
+}
+
+#navbar--logo h1 {
+  font-weight: 900;
 }
 
 #navbar--links {
