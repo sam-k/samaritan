@@ -109,7 +109,7 @@ function Home() {
                   Medical Emergency
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Triage an urgent, unknown situation and give immediate first aid.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -120,7 +120,7 @@ function Home() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.root}>
-            <CardActionArea>
+            <CardActionArea href="/mental">
               <CardMedia
                 className={classes.media}
                 image={mental}
@@ -130,7 +130,7 @@ function Home() {
                   Mental Health Emergency
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Help a person in immediate crisis, or deescalate the situation.
                 </Typography>
               </CardContent>
             </CardActionArea>

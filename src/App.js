@@ -15,6 +15,9 @@ import Pulse from './components/Pulse';
 import RescueBreathing from './components/RescueBreathing';
 import Choking from './components/Choking';
 import Results from './components/Results';
+import MentalHealth from './components/MentalHealth';
+import MentalResults from './components/MentalResults';
+
 import Home from './components/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Collapse from '@material-ui/core/Collapse';
@@ -40,7 +43,7 @@ const classes = useStyles();
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href="/">
             <HomeIcon/>
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h4" className={classes.title}>
             Samaritan
           </Typography>
         </Toolbar>
@@ -54,6 +57,9 @@ const classes = useStyles();
           <Route path="/step4" exact component={RescueBreathing} />
           <Route path="/step5" exact component={Choking} />
           <Route path="/results" exact component={Results} />
+          <Route path="/mental" exact component={MentalHealth} />
+          <Route path="/mentalresults" exact component={MentalResults} />
+
         </Switch>
       </Router>
     </div>
