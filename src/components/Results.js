@@ -19,6 +19,7 @@ import ChokingResults from './ChokingResults';
 import MonitorResults from './MonitorResults';
 import Call911 from './Call911';
 import OtherResults from './OtherResults';
+import UnconsciousChokingResults from './UnconsciousChokingResults';
 
 function Results() {
   const open = JSON.parse(localStorage.getItem("open"));
@@ -29,7 +30,8 @@ function Results() {
   const choking = JSON.parse(localStorage.getItem("choking"))
   const rescuebreathingLeaf = !conscious && !breathing && rescuebreathing && pulse
   const cprLeaf = !conscious && !breathing && rescuebreathing && !pulse
-  const chokingLeaf = (!conscious && !breathing && !rescuebreathing) || (conscious && !breathing && choking)
+  const chokingLeaf = conscious && !breathing && choking
+  const unconsciousChokingLeaf = !conscious && !breathing && !rescuebreathing
   const monitor = !conscious && breathing
   const call911 = conscious && !breathing && !choking
   const other = conscious && breathing
@@ -43,6 +45,7 @@ function Results() {
       {rescuebreathingLeaf ? <RescueBreathingResults/>: null}
       {cprLeaf ? <CPRResults/>: null}
       {chokingLeaf ? <ChokingResults/>: null}
+      {unconsciousChokingLeaf ? <UnconsciousChokingResults/>: null}
       {monitor ? <MonitorResults/>: null}
       {call911 ? <Call911/>: null}
       {other ? <OtherResults/>: null}
