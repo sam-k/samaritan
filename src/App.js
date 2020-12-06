@@ -18,18 +18,6 @@ import MentalResults from './components/Results/MentalResults';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-    },
-  }));
-const classes = useStyles();
   return (
     <div id="App">
       <Navbar />
