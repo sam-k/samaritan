@@ -4,7 +4,7 @@ import { Button, Card, CardContent, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Triage.css';
 
-import panic from '../../pictures/panicAttack.PNG';
+import panic from '../../pictures/panicattack.PNG';
 
 function MentalHealth() {
   let history = useHistory();
