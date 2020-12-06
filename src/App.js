@@ -1,20 +1,25 @@
 import './App.css';
-
-import Disclaimer from './components/Header/Disclaimer';
 import Navbar from './components/Header/Navbar';
 import Warning from './components/Header/Warning';
+import Menu from './components/Triage/Menu';
+import Triage from './components/Triage/Triage';
+import Footer from './components/Footer/Footer';
+import Disclaimer from './components/Footer/Disclaimer';
 
 function App() {
   return (
-    <div className="App">
+    <div id="App">
       <div id="App-header">
         <Navbar />
         <Warning />
       </div>
-      <div id="triage">
-        
+      <div id="App-body">
+        <Menu />
       </div>
-      <Disclaimer />
+      <div id="App-footer">
+        <Footer />
+        <Disclaimer />
+      </div>
     </div>
   );
 }
