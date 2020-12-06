@@ -10,8 +10,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardHeader from '@material-ui/core/CardHeader';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import cpr1 from '../pictures/cpr1.PNG'
-import cpr2 from '../pictures/cpr2.PNG'
+import choking from '../pictures/choking.PNG'
+import choking2 from '../pictures/choking2.PNG'
 import Alert from '@material-ui/lab/Alert';
 
 function ChokingResults() {
@@ -36,19 +36,12 @@ function ChokingResults() {
   return (
     <div className="ChokingResults">
     <Container fixed>
-      <Typography variant="h4" >
-        Conduct CPR
-      </Typography>
-      <br></br><br></br>
-      <Typography variant="h6" >
-        How to conduct CPR:
-      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={cpr1}
+              image={choking}
             />
             <CardContent>
               <Typography variant="h5" component="h2">
@@ -92,7 +85,7 @@ function ChokingResults() {
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={cpr2}
+              image={choking2}
             />
             <CardContent>
               <Typography variant="h5" component="h2">

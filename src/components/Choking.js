@@ -60,31 +60,24 @@ function Choking() {
           <Card className={classes.root}>
 
             <CardContent>
-            <Grid container spacing={3}>
-              <Grid xs></Grid>
-              <Grid item xs={12} sm={6}>
-                <Typography variant="h5" component="h2">
-                  If the patient cannot:
-                </Typography>
-                <Typography variant="h5" component="p">
-                speak
-                </Typography>
-                <Typography variant="h5" component="p">
-                cry
-                </Typography>
-                <Typography variant="h5" component="p">
-                cough
-                </Typography>
-                <Typography variant="h5" component="p">
-                or breathe,
-                </Typography>
-                <Typography variant="h5" component="p">
-                They are choking
-                </Typography>
-              </Grid>
-              <Grid xs></Grid>
-            </Grid>
-
+            <Typography variant="h5" component="h2">
+              If the patient cannot:
+            </Typography>
+            <Typography variant="h5" component="p">
+            speak
+            </Typography>
+            <Typography variant="h5" component="p">
+            cry
+            </Typography>
+            <Typography variant="h5" component="p">
+            cough
+            </Typography>
+            <Typography variant="h5" component="p">
+            or breathe,
+            </Typography>
+            <Typography variant="h5" component="p">
+            They are choking
+            </Typography>
 
             </CardContent>
           </Card>

@@ -15,8 +15,7 @@ import Pulse from './components/Pulse';
 import RescueBreathing from './components/RescueBreathing';
 import Choking from './components/Choking';
 import Results from './components/Results';
-
-import Home from './components/Home'
+import Home from './components/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Collapse from '@material-ui/core/Collapse';
 import HomeIcon from '@material-ui/icons/Home';
