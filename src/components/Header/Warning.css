@@ -1,11 +1,11 @@
 #warning {
-  width: 100%;
-  padding: 0rem 12rem;
-  background-color: red;
   width: auto;
-
   display: flex;
   align-items: center;
+
+  padding: 0rem 12rem;
+  background-color: red;
+  font-size: calc(10px + 2vmin);
   }
 
 #warning--logo {

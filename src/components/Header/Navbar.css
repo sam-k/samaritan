@@ -1,12 +1,12 @@
 #navbar {
-  width: 100%;
-  padding: 0rem 12rem;
-  background-color: white;
-
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: auto;
+  
+  padding: 0rem 12rem;
+  background-color: white;
+  font-size: calc(10px + 2vmin);
 }
 
 #navbar--logo {
@@ -25,9 +25,9 @@
 }
 
 #navbar--links {
-  list-style: none;
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
 #navbar--links a {
