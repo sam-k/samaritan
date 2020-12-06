@@ -15,6 +15,11 @@
   margin-right: auto;
 }
 
+#navbar--logo a {
+  color: black;
+  text-decoration: none;
+}
+
 #navbar--logo img {
   height: 8vmin;
   margin-right: 0.5rem;
