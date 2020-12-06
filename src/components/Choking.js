@@ -1,4 +1,3 @@
-import './Conscious.css';
 import React, {useState} from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -12,17 +11,16 @@ import CardHeader from '@material-ui/core/CardHeader';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { useHistory } from 'react-router-dom';
-import conscious1 from '../pictures/conscious1.PNG'
-import conscious2 from '../pictures/conscious2.PNG'
+import rescuebreathing from '../pictures/rescue breaths.PNG'
 import Alert from '@material-ui/lab/Alert';
 
-function Conscious() {
+function Choking() {
   const [open, setOpen] = useState(JSON.parse(localStorage.getItem("open")));
 
   let history = useHistory();
   const useStyles = makeStyles((theme) => ({
     root: {
-      maxWidth: 500,
+      maxWidth: 1000,
     },
     media: {
       height: 300,
@@ -38,64 +36,59 @@ function Conscious() {
   const classes = useStyles();
 
   function yesClick(){
-    localStorage.setItem("conscious", true)
-    history.push("/step2")
+    localStorage.setItem("choking", true)
+    history.push("/results")
   }
   function noClick(){
-    localStorage.setItem("conscious", false)
-    history.push("/step2")
+    localStorage.setItem("choking", false)
+    history.push("/results")
   }
   return (
-    <div className="Conscious">
+    <div className="Choking">
     <Collapse in={!open}>
       <Alert severity="error" >Disclamer: If you suspect a medical emergency, call 911 immediately before or instead of proceeding with this page</Alert>
     </Collapse>
     <Container fixed>
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <Typography variant="h4" >
-        Is the patient conscious?
+        Is the patient choking?
       </Typography>
       <br></br><br></br>
       <Typography variant="h6" >
-        How to check for consciousness
+        How to know if someone is choking
       </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
           <Card className={classes.root}>
-            <CardMedia
-              className={classes.media}
-              image={conscious1}
-            />
+
             <CardContent>
-              <Typography variant="h5" component="h2">
-                FOR CHILD OR ADULT
-              </Typography>
-              <Typography variant="h6" color="textSecondary" component="p">
-                Tap their sholder and shout "Are you okay?"
-              </Typography>
+            <Grid container spacing={3}>
+              <Grid xs></Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography variant="h5" component="h2">
+                  If the patient cannot:
+                </Typography>
+                <Typography variant="h5" component="p">
+                speak
+                </Typography>
+                <Typography variant="h5" component="p">
+                cry
+                </Typography>
+                <Typography variant="h5" component="p">
+                cough
+                </Typography>
+                <Typography variant="h5" component="p">
+                or breathe,
+                </Typography>
+                <Typography variant="h5" component="p">
+                They are choking
+                </Typography>
+              </Grid>
+              <Grid xs></Grid>
+            </Grid>
+
+
             </CardContent>
           </Card>
-        </Grid>
 
-
-
-        <Grid item xs={12} sm={6}>
-          <Card className={classes.root}>
-            <CardMedia
-              className={classes.media}
-              image={conscious2}
-            />
-            <CardContent>
-              <Typography variant="h5" component="h2">
-                FOR INFANT
-              </Typography>
-              <Typography variant="h6" color="textSecondary" component="p">
-                Tap their shoulder or flick their foot
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
       <br></br><br></br><br></br><br></br>
       <Button className={classes.button} variant="contained" color="default" value="false" onClick={noClick}>No</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button className={classes.button} variant="contained" color="secondary" value="true" onClick={yesClick}>Yes</Button>
 
@@ -105,4 +98,4 @@ function Conscious() {
   );
 }
 
-export default Conscious;
+export default Choking;

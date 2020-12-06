@@ -68,7 +68,7 @@ function Home() {
     <Container fixed>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <Typography variant="h2" className={classes.title}>
-        MyEmergency
+        Samaritan
       </Typography>
       <br></br>
       <Typography variant="body2" className='blurb'>
@@ -76,7 +76,7 @@ function Home() {
       </Typography>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <Typography variant="h4" className={classes.title}>
-        Diagnosis Helper
+        Response Helper
       </Typography>
       <Divider />
       <br></br>

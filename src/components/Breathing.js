@@ -12,13 +12,13 @@ import CardHeader from '@material-ui/core/CardHeader';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { useHistory } from 'react-router-dom';
-import conscious1 from '../pictures/conscious1.PNG'
-import conscious2 from '../pictures/conscious2.PNG'
+import breathing from '../pictures/breathing.PNG'
+import breathing2 from '../pictures/breathing2.PNG'
 import Alert from '@material-ui/lab/Alert';
 
-function Conscious() {
+function Breathing() {
   const [open, setOpen] = useState(JSON.parse(localStorage.getItem("open")));
-
+  const conscious = JSON.parse(localStorage.getItem("conscious"))
   let history = useHistory();
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,40 +38,61 @@ function Conscious() {
   const classes = useStyles();
 
   function yesClick(){
-    localStorage.setItem("conscious", true)
-    history.push("/step2")
+    localStorage.setItem("breathing", true)
+    history.push("/results")
   }
   function noClick(){
-    localStorage.setItem("conscious", false)
-    history.push("/step2")
+    localStorage.setItem("breathing", false)
+    if (conscious) {
+      history.push("/step5")
+    } else {
+      history.push("/step4")
+    }
   }
   return (
-    <div className="Conscious">
+    <div className="Breathing">
     <Collapse in={!open}>
       <Alert severity="error" >Disclamer: If you suspect a medical emergency, call 911 immediately before or instead of proceeding with this page</Alert>
     </Collapse>
     <Container fixed>
       <br></br><br></br><br></br><br></br><br></br><br></br>
+      {!conscious ? <Typography variant="h3" > Call 911 </Typography>: null}
       <Typography variant="h4" >
-        Is the patient conscious?
+        Is the patient breathing?
       </Typography>
       <br></br><br></br>
       <Typography variant="h6" >
-        How to check for consciousness
+        How to check for breathing
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={conscious1}
+              image={breathing}
             />
             <CardContent>
               <Typography variant="h5" component="h2">
                 FOR CHILD OR ADULT
               </Typography>
               <Typography variant="h6" color="textSecondary" component="p">
-                Tap their sholder and shout "Are you okay?"
+              1. Position the patient:
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - If the victim is face-down, roll the victim onto his or
+              her back, while supporting the head and neck
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - Tilt back head and lift chin to open airway
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              2. Check for breathing
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - Look for movement and look, listen and feel for normal breathing for 10s
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - Irregular, gasping or shallow breathing is not normal breathing
               </Typography>
             </CardContent>
           </Card>
@@ -83,14 +104,26 @@ function Conscious() {
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={conscious2}
+              image={breathing2}
             />
             <CardContent>
               <Typography variant="h5" component="h2">
                 FOR INFANT
               </Typography>
               <Typography variant="h6" color="textSecondary" component="p">
-                Tap their shoulder or flick their foot
+              1. Position the patient:
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - Tilt head to neutral position
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              2. Check for breathing
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - Look for movement and look, listen and feel for normal breathing for 10s
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              - Irregular, gasping or shallow breathing is not normal breathing
               </Typography>
             </CardContent>
           </Card>
@@ -105,4 +138,4 @@ function Conscious() {
   );
 }
 
-export default Conscious;
+export default Breathing;

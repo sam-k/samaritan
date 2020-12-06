@@ -1,4 +1,3 @@
-import './Conscious.css';
 import React, {useState} from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -11,15 +10,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardHeader from '@material-ui/core/CardHeader';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { useHistory } from 'react-router-dom';
-import conscious1 from '../pictures/conscious1.PNG'
-import conscious2 from '../pictures/conscious2.PNG'
+import cpr1 from '../pictures/cpr1.PNG'
+import cpr2 from '../pictures/cpr2.PNG'
 import Alert from '@material-ui/lab/Alert';
 
-function Conscious() {
+function CPRResults() {
   const [open, setOpen] = useState(JSON.parse(localStorage.getItem("open")));
-
-  let history = useHistory();
+  const conscious = JSON.parse(localStorage.getItem("conscious"))
   const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 500,
@@ -36,73 +33,72 @@ function Conscious() {
     }
   }));
   const classes = useStyles();
-
-  function yesClick(){
-    localStorage.setItem("conscious", true)
-    history.push("/step2")
-  }
-  function noClick(){
-    localStorage.setItem("conscious", false)
-    history.push("/step2")
-  }
   return (
-    <div className="Conscious">
-    <Collapse in={!open}>
-      <Alert severity="error" >Disclamer: If you suspect a medical emergency, call 911 immediately before or instead of proceeding with this page</Alert>
-    </Collapse>
-    <Container fixed>
-      <br></br><br></br><br></br><br></br><br></br><br></br>
+    <div className="CPRResults">
       <Typography variant="h4" >
-        Is the patient conscious?
+        Conduct CPR
       </Typography>
       <br></br><br></br>
       <Typography variant="h6" >
-        How to check for consciousness
+        How to conduct CPR:
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={conscious1}
+              image={cpr1}
             />
             <CardContent>
               <Typography variant="h5" component="h2">
                 FOR CHILD OR ADULT
               </Typography>
               <Typography variant="h6" color="textSecondary" component="p">
-                Tap their sholder and shout "Are you okay?"
+              1. Lay the patient on the back and open their airways
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              2. Do 30 chest compression
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              3. Do 2 rescue breaths
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              4. Repeat until an ambulance arrive
               </Typography>
             </CardContent>
           </Card>
         </Grid>
-
 
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={conscious2}
+              image={cpr2}
             />
             <CardContent>
               <Typography variant="h5" component="h2">
                 FOR INFANT
               </Typography>
               <Typography variant="h6" color="textSecondary" component="p">
-                Tap their shoulder or flick their foot
+              1. Lay the patient on the back and open their airways
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              2. Do 30 chest compression
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              3. Do 2 rescue breaths
+              </Typography>
+              <Typography variant="h6" color="textSecondary" component="p">
+              4. Repeat until an ambulance arrive
               </Typography>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
-      <br></br><br></br><br></br><br></br>
-      <Button className={classes.button} variant="contained" color="default" value="false" onClick={noClick}>No</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button className={classes.button} variant="contained" color="secondary" value="true" onClick={yesClick}>Yes</Button>
-
-      </Container>
     </div>
 
   );
 }
 
-export default Conscious;
+export default CPRResults;
