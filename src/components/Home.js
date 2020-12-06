@@ -69,7 +69,7 @@ function Home() {
       <DialogTitle id="alert-dialog-title">{"DISCLAMER"}</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          Something here about medical disclamer
+          If you suspect a medical emergency, call 911 immediately before or instead of proceeding with this page
         </DialogContentText>
       </DialogContent>
       <DialogActions>
