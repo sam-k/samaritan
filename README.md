@@ -1,6 +1,13 @@
 # Samaritan
 
-Check out our functioning, deployed web app here: [www.samarit.tech](https://www.samarit.tech)
+Check out our functioning, deployed web app here: **[www.samarit.tech](https://www.samarit.tech)**
+
+Created for HackDuke 2020 by:
+- [Huilang Chen](https://github.com/Huilang-Chen), UMD ’21
+- [Sam Kim](https://github.com/sam-k), Duke ’21
+- [Quentin MacFarlane](https://github.com/qmac333), Duke ’24
+- [Kevin Yin](https://github.com/KevinPHX), Duke ’24
+- [Andy Zhou](https://github.com/azhou202), Duke ’24
 
 ## Track
 
