@@ -1,19 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Alert from '@material-ui/lab/Alert';
-import Conscious from './components/Conscious';
-import Home from './components/Home'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Collapse from '@material-ui/core/Collapse';
-import HomeIcon from '@material-ui/icons/Home';
+
+import Navbar from './components/Header/Navbar';
+import Warning from './components/Header/Warning';
+
+import Home from './components/Home/Home';
+import Conscious from './components/Triage/Conscious';
+import Breathing from './components/Triage/Breathing';
+import Pulse from './components/Triage/Pulse';
+import RescueBreathing from './components/Triage/RescueBreathing';
+import Choking from './components/Triage/Choking';
+import MentalHealth from './components/Triage/MentalHealth';
+
+import Results from './components/Results/Results';
+import MentalResults from './components/Results/MentalResults';
+
+import Footer from './components/Footer/Footer';
+
 function App() {
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,23 +31,25 @@ function App() {
   }));
 const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="secondary">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href="/">
-            <HomeIcon/>
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            MyEmergency
-          </Typography>
-        </Toolbar>
-      </AppBar>
+    <div id="App">
+      <Navbar />
+      <Warning />
+
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/step1" exact component={Conscious} />
+          <Route path="/step2" exact component={Breathing} />
+          <Route path="/step3" exact component={Pulse} />
+          <Route path="/step4" exact component={RescueBreathing} />
+          <Route path="/step5" exact component={Choking} />
+          <Route path="/results" exact component={Results} />
+          <Route path="/mental" exact component={MentalHealth} />
+          <Route path="/mentalresults" exact component={MentalResults} />
         </Switch>
       </Router>
+
+      <Footer />
     </div>
 
   );

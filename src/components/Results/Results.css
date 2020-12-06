@@ -1,0 +1,53 @@
+.results {
+  margin: 3rem 0;
+  padding: 0rem 12rem;
+}
+
+.results--result {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(255, 0, 0, 25%);
+}
+
+.results--result i {
+  margin-right: 1rem;
+  font-size: 3em;
+}
+
+.results--result h2 {
+  font-size: 2em;
+}
+
+.results--choose {
+  margin: 2rem 0;
+}
+
+.results--choose h1 {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.results--divider {
+  padding: 1px;
+}
+
+.results--how-to {
+  margin: 2rem 0;
+}
+
+.results--how-to h2 {
+  text-align: center;
+}
+
+.results--how-to li {
+  margin: 0.5em;
+}
+
+.results--how-to-cards {
+  /* max-width: 500; */
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,18 @@
+#warning {
+  width: auto;
+  display: flex;
+  align-items: center;
+
+  padding: 0rem 12rem;
+  background-color: red;
+  font-size: calc(10px + 2vmin);
+  }
+
+#warning--logo {
+  color: white;
+  margin-right: 1rem;
+}
+
+#warning--text {
+  color: white;
+}

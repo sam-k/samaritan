@@ -1,0 +1,37 @@
+#disclaimer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#disclaimer--window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  transform: translate(-50%,-50%);
+
+  padding: 2rem;
+  background-color: white;
+  border-radius: 25px;
+}
+
+#disclaimer--window h1 {
+  margin: 0;
+}
+
+#disclaimer--window p {
+  line-height: 1.5em;
+}
+
+.disclaimer--button {
+  float: right;
+
+  padding: 0.5rem 1rem;
+}
