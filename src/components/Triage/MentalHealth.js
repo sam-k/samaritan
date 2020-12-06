@@ -4,10 +4,9 @@ import { Button, Card, CardContent, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Triage.css';
 
-import conscious1 from '../../pictures/conscious1.PNG';
-import conscious2 from '../../pictures/conscious2.PNG';
+import panic from '../../pictures/panicAttack.PNG';
 
-function Conscious() {
+function MentalHealth() {
   let history = useHistory();
 
   const useStyles = makeStyles((theme) => ({
@@ -24,18 +23,34 @@ function Conscious() {
   const classes = useStyles();
 
   function yesClick() {
-    localStorage.setItem("conscious", true);
-    history.push("/step2");
+    localStorage.setItem("mental", true);
+    history.push("/mentalresults");
   }
   function noClick() {
-    localStorage.setItem("conscious", false);
-    history.push("/step2");
+    localStorage.setItem("mental", false);
+    history.push("/mentalresults");
   }
-
   return (
     <div className="triage">
       <div className="triage--choose">
-        <h1>Is the victim <span style={{ color: "red" }}>conscious</span>?</h1>
+        <h1>Does the person have any of the <span style={{ color: "red" }}>following symptoms</span>?</h1>
+      </div>
+
+      {/* Let's just use this here bc the CSS already exists */}
+      <div className="triage--how-to">
+        <div className="triage--how-to-cards">
+          <Card className={classes.root} style={{ width: "40%" }}>
+            <CardMedia className={classes.media} image={panic} />
+            <CardContent>
+              <p>Thoughts of harming self or others?</p>
+              <p>Attempts at harming self or others?</p>
+              <p>Mental-health symptoms that impact the ability to function or care for basic needs?</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      <div className="triage--choose">
         <ul className="triage--options">
           <li>
             <Button
@@ -57,31 +72,8 @@ function Conscious() {
           </li>
         </ul>
       </div>
-
-      <div className="triage--divider" />
-
-      <div className="triage--how-to">
-        <h2>How to check for consciousness:</h2>
-        <div className="triage--how-to-cards">
-          <Card className={classes.root} style={{ width: "40%" }}>
-            <CardMedia className={classes.media} image={conscious1} />
-            <CardContent>
-              <h3>For child or adult:</h3>
-              <p>Tap their sholder and shout, “Are you okay?”</p>
-            </CardContent>
-          </Card>
-
-          <Card className={classes.root} style={{ width: "40%" }}>
-            <CardMedia className={classes.media} image={conscious2} />
-            <CardContent>
-              <h3>For an infant:</h3>
-              <p>Tap their shoulder or flick their foot.</p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
     </div>
   );
 }
 
-export default Conscious;
+export default MentalHealth;

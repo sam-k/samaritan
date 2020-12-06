@@ -1,9 +1,9 @@
-.triage {
+.results {
   margin: 3rem 0;
   padding: 0rem 12rem;
 }
 
-.triage--instruction {
+.results--result {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -12,52 +12,41 @@
   background-color: rgb(255, 0, 0, 25%);
 }
 
-.triage--instruction i {
+.results--result i {
   margin-right: 1rem;
   font-size: 3em;
 }
 
-.triage--instruction h2 {
+.results--result h2 {
   font-size: 2em;
 }
 
-.triage--choose {
+.results--choose {
   margin: 2rem 0;
 }
 
-.triage--choose h1 {
+.results--choose h1 {
   margin: 1em 0;
   text-align: center;
 }
 
-.triage--options {
-  width: auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  padding: 0;
-  list-style: none;
-  list-style-position: inside;
-}
-
-.triage--divider {
+.results--divider {
   padding: 1px;
 }
 
-.triage--how-to {
+.results--how-to {
   margin: 2rem 0;
 }
 
-.triage--how-to h2 {
+.results--how-to h2 {
   text-align: center;
 }
 
-.triage--how-to li {
+.results--how-to li {
   margin: 0.5em;
 }
 
-.triage--how-to-cards {
+.results--how-to-cards {
   /* max-width: 500; */
   display: flex;
   justify-content: space-around;

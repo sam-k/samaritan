@@ -1,92 +1,76 @@
-import React, { useState } from 'react';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Collapse from '@material-ui/core/Collapse';
-import Container from '@material-ui/core/Container';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardHeader from '@material-ui/core/CardHeader';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
-import rescuebreathing from '../../pictures/rescueBreaths.PNG'
+import { Button, Card, CardContent, CardMedia } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import './Triage.css';
+
+// import rescueBreaths from '../../pictures/rescueBreaths.PNG';
 
 function Choking() {
-  const [open, setOpen] = useState(JSON.parse(localStorage.getItem("open")));
-
   let history = useHistory();
+
   const useStyles = makeStyles((theme) => ({
-    root: {
-      maxWidth: 1000,
-    },
-    media: {
-      height: 300,
-      // paddingTop: '56.25%', // 16:9
-    },
+    root: { maxWidth: 400 },
+    media: { height: 240 },
     button: {
-      height: 100,
-      width: 200,
-      justifyContent: 'center',
-      alignItems: 'center'
+      padding: "2.5rem 5rem",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "1.5em",
+      fontWeight: 700
     }
   }));
   const classes = useStyles();
 
   function yesClick() {
-    localStorage.setItem("choking", true)
-    history.push("/results")
+    localStorage.setItem("choking", true);
+    history.push("/results");
   }
   function noClick() {
-    localStorage.setItem("choking", false)
-    history.push("/results")
+    localStorage.setItem("choking", false);
+    history.push("/results");
   }
+
   return (
-    <div className="Choking">
-      <Collapse in={!open}>
-        <div severity="error" >Disclamer: If you suspect a medical emergency, call 911 immediately before or instead of proceeding with this page</div>
-      </Collapse>
-      <Container fixed>
-        <br></br><br></br><br></br><br></br><br></br><br></br>
-        <Typography variant="h4" >
-          Is the patient choking?
-      </Typography>
-        <br></br><br></br>
-        <Typography variant="h6" >
-          How to know if someone is choking
-      </Typography>
-        <Card className={classes.root}>
+    <div className="triage">
+      <div className="triage--choose">
+        <h1>Is the victim <span style={{ color: "red" }}>choking</span>?</h1>
+        <ul className="triage--options">
+          <li>
+            <Button
+              className={classes.button}
+              variant="contained"
+              value="true"
+              onClick={yesClick}
+              style={{ backgroundColor: "#00000020" }}
+            >Yes</Button>
+          </li>
+          <li>
+            <Button
+              className={classes.button}
+              variant="contained"
+              value="false"
+              onClick={noClick}
+              style={{ backgroundColor: "#ff000066" }}
+            >No</Button>
+          </li>
+        </ul>
+      </div>
 
-          <CardContent>
-            <Typography variant="h5" component="h2">
-              If the patient cannot:
-            </Typography>
-            <Typography variant="h5" component="p">
-              speak
-            </Typography>
-            <Typography variant="h5" component="p">
-              cry
-            </Typography>
-            <Typography variant="h5" component="p">
-              cough
-            </Typography>
-            <Typography variant="h5" component="p">
-              or breathe,
-            </Typography>
-            <Typography variant="h5" component="p">
-              They are choking
-            </Typography>
+      <div className="triage--divider" />
 
-          </CardContent>
-        </Card>
-
-        <br></br><br></br><br></br><br></br>
-        <Button className={classes.button} variant="contained" color="default" value="false" onClick={noClick}>No</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button className={classes.button} variant="contained" color="secondary" value="true" onClick={yesClick}>Yes</Button>
-
-      </Container>
+      <div className="triage--how-to">
+        <h2>How to check for choking:</h2>
+        <div className="triage--how-to-cards">
+          <Card className={classes.root} style={{ width: "40%" }}>
+            {/* <CardMedia className={classes.media} image={rescueBreaths} /> */}
+            <CardContent>
+              <p>If the victim cannot speak, cry, cough or breathe, they are choking.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
-
   );
 }
 

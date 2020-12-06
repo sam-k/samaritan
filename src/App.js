@@ -10,7 +10,10 @@ import Breathing from './components/Triage/Breathing';
 import Pulse from './components/Triage/Pulse';
 import RescueBreathing from './components/Triage/RescueBreathing';
 import Choking from './components/Triage/Choking';
-import Results from './components/Triage/Results';
+import MentalHealth from './components/Triage/MentalHealth';
+
+import Results from './components/Results/Results';
+import MentalResults from './components/Results/MentalResults';
 
 import Footer from './components/Footer/Footer';
 
@@ -29,6 +32,8 @@ function App() {
           <Route path="/step4" exact component={RescueBreathing} />
           <Route path="/step5" exact component={Choking} />
           <Route path="/results" exact component={Results} />
+          <Route path="/mental" exact component={MentalHealth} />
+          <Route path="/mentalresults" exact component={MentalResults} />
         </Switch>
       </Router>
 

@@ -1,4 +1,6 @@
 import './Home.css';
+import Disclaimer from '../Home/Disclaimer'
+
 import logoMed from '../../logoMed.svg';
 import logoMH from '../../logoMH.svg';
 
@@ -17,11 +19,11 @@ function Home() {
           </li>
         </a>
 
-        <a className="home--box home--box-link" href="/step2">
+        <a className="home--box home--box-link" href="/mental">
           <li>
             <h2>Mental Health Emergency</h2>
             <div className="home--desc">
-              <p>Help a person in immediate crisis, or deescalate the situation.</p>
+              <p>Deescalate a situation, or help a person in immediate crisis.</p>
             </div>
             <img src={logoMH} alt="Mental Health Emergency" />
           </li>
@@ -54,6 +56,8 @@ function Home() {
           </li>
         </div>
       </ul>
+
+      <Disclaimer />
     </div>
   );
 }

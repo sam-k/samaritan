@@ -1,13 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
+import { Button, Card, CardContent, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Triage.css';
 
-import rescueBreaths from '../../pictures/rescueBreaths.PNG'
+import rescueBreaths from '../../pictures/rescueBreaths.PNG';
 
 function RescueBreathing() {
   let history = useHistory();
@@ -40,8 +37,10 @@ function RescueBreathing() {
         <h2>Give 2 rescue breaths. <span style={{ fontWeight: 400 }}>See below for instructions.</span></h2>
       </div>
 
+      <div className="triage--divider" />
+
       <div className="triage--choose">
-        <h1>Did the victim’s <span style={{ color: "red" }}>chest rise</span>?</h1>
+        <h1>After giving rescue breaths, did the victim’s <span style={{ color: "red" }}>chest rise</span>?</h1>
         <ul className="triage--options">
           <li>
             <Button
