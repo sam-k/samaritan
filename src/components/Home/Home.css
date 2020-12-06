@@ -11,9 +11,9 @@
 #home--options {
   width: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 1.5rem;
-
+  height: 350px;
   padding: 0;
   list-style: none;
 }
@@ -37,7 +37,7 @@
   margin: 0;
   padding: 1.5rem;
   text-align: center;
-  
+
   font-weight: 700;
   background-color: rgb(255, 128, 128);
   border-radius: 5px 5px 0 0;

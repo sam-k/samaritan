@@ -10,11 +10,12 @@ import UnconsciousChokingResults from './UnconsciousChokingResults';
 function Results() {
   const conscious = JSON.parse(localStorage.getItem("conscious"));
   const breathing = JSON.parse(localStorage.getItem("breathing"));
-  const rescuebreathing = JSON.parse(localStorage.getItem("rescuebreathing"));
+  const rescuebreathing = JSON.parse(localStorage.getItem("chestRose"));
   const pulse = JSON.parse(localStorage.getItem("pulse"));
   const choking = JSON.parse(localStorage.getItem("choking"));
 
   const rescuebreathingLeaf = !conscious && !breathing && rescuebreathing && pulse;
+  console.log(rescuebreathingLeaf)
   const cprLeaf = !conscious && !breathing && rescuebreathing && !pulse;
   const chokingLeaf = conscious && !breathing && choking;
   const unconsciousChokingLeaf = !conscious && !breathing && !rescuebreathing;
