@@ -1,10 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Button, Card, CardContent, CardMedia } from '@material-ui/core';
+import { Button, Card, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Triage.css';
-
-// import rescueBreaths from '../../pictures/rescueBreaths.PNG';
 
 function Choking() {
   let history = useHistory();
@@ -63,7 +61,6 @@ function Choking() {
         <h2>How to check for choking:</h2>
         <div className="triage--how-to-cards">
           <Card className={classes.root} style={{ width: "40%" }}>
-            {/* <CardMedia className={classes.media} image={rescueBreaths} /> */}
             <CardContent>
               <p>If the victim cannot speak, cry, cough or breathe, they are choking.</p>
             </CardContent>

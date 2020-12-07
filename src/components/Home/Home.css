@@ -13,7 +13,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.5rem;
-  height: 350px;
   padding: 0;
   list-style: none;
 }
@@ -48,7 +47,7 @@
   width: 10rem;
   text-align: center;
   margin: auto auto;
-  margin: auto auto 0 auto;
+  padding: 1rem 0;
 }
 
 .home--desc {

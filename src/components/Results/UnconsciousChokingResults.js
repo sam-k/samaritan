@@ -6,7 +6,6 @@ import './Results.css';
 import cpr1 from '../../pictures/cpr1.PNG';
 import cpr2 from '../../pictures/cpr2.PNG';
 
-
 function UnconsciousChokingResults() {
   const useStyles = makeStyles((theme) => ({
     root: { maxWidth: 400 },

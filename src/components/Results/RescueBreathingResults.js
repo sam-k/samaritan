@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,7 +13,7 @@ function RescueBreathingResults() {
   const classes = useStyles();
 
   return (
-    <div className="RescueBreathingResults">
+    <div className="results">
       <div className="results--result">
         <i class="fas fa-bullhorn" />
         <h2>Start giving rescue breaths.</h2>

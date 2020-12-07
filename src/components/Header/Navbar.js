@@ -1,5 +1,6 @@
 import './Navbar.css';
-import logo from '../../logo.svg';
+
+import logo from '../../logos/logo.svg';
 
 function Navbar() {
   return (
@@ -12,8 +13,8 @@ function Navbar() {
       </div>
       <ul id="navbar--links">
         <li className="navbar--link-item"><a href="/">Triage</a></li>
-        <li className="navbar--link-item"><a href="/about">About</a></li>
-        <li className="navbar--link-item"><a href="/contact">Contact</a></li>
+        <li className="navbar--link-item"><a href="/">About</a></li>
+        <li className="navbar--link-item"><a href="/">Contact</a></li>
       </ul>
     </nav>
   );
