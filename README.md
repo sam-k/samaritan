@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Samaritan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check out our functioning, deployed web app here: **[www.samarit.tech](https://www.samarit.tech)**
 
-## Available Scripts
+Created for HackDuke 2020 by:
+- [Huilang Chen](https://github.com/Huilang-Chen), UMD ’21
+- [Sam Kim](https://github.com/sam-k), Duke ’21
+- [Quentin MacFarlane](https://github.com/qmac333), Duke ’24
+- [Kevin Yin](https://github.com/KevinPHX), Duke ’24
+- [Andy Zhou](https://github.com/azhou202), Duke ’24
 
-In the project directory, you can run:
+## Track
 
-### `npm start`
+Health
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Inspiration
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Time is of the essence in emergencies. However, sometimes when people are in an emergency and call 911, they are put on hold while their call is being transferred or until an operator is available. Moreover, due to COVID-19, the average wait time to reach a 911 dispatcher increased from 9 seconds to 25 seconds. Additionally, concise first aid information is not accessible on the internet. Knowing what to do in emergencies is critical to helping a person survive. Thus, we wanted to create an app that would help a person provide quick and effective first aid to another person in need.
 
-### `npm test`
+## What it does
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Samaritan has three functions: medical emergency triage, mental health triage, and quick access. Medical emergency triage walks the user through steps to determine what first aid to perform on a person in need. Mental health triage does the same, but for mental health crises. Quick access allows users to find a specific emergency (e.g. stroke) and easily find what first aid to administer.
 
-### `npm run build`
+## How we built it
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We did research into different types of medical and mental health emergencies and the type of first aid that needs to be administered in each situation. This app was built through javascript and react with Material-UI. We created our own CSS and components with pathways that return specific actions in response to the user inputs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Challenges we ran into
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A challenge was to determine what aid to perform in mental health crises. Resources are scant on the internet, so it was a challenge to find in-depth, medically-supported material.
 
-### `npm run eject`
+## Accomplishments that we're proud of
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The app is intuitive and easy to use. It is aesthetically pleasing and provides quick access to a wide variety of situations where immediate first aid is needed. The explanations for how to administer the first aid are thorough and easy to understand, but not too long so as to waste time.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## What we learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+We learned about different steps to gauge what first aid to administer, and we learned that mental health crises are hard to tackle because there is a lot of ambiguity around when to call 911.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## What's next for Samaritan
 
-## Learn More
+We want to deploy the app for testing and receive feedback.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+JavaScript and React.js.
