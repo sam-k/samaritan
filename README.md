@@ -9,6 +9,8 @@ Created for HackDuke 2020 by:
 - [Kevin Yin](https://github.com/KevinPHX), Duke ’24
 - [Andy Zhou](https://github.com/azhou202), Duke ’24
 
+![Web app front page](https://user-images.githubusercontent.com/21956685/117006895-fc309600-acb6-11eb-8dc6-12b65f9cabfe.png)
+
 ## Track
 
 Health
@@ -29,7 +31,7 @@ We did research into different types of medical and mental health emergencies an
 
 A challenge was to determine what aid to perform in mental health crises. Resources are scant on the internet, so it was a challenge to find in-depth, medically-supported material.
 
-## Accomplishments that we're proud of
+## Accomplishments that we’re proud of
 
 The app is intuitive and easy to use. It is aesthetically pleasing and provides quick access to a wide variety of situations where immediate first aid is needed. The explanations for how to administer the first aid are thorough and easy to understand, but not too long so as to waste time.
 
@@ -37,7 +39,7 @@ The app is intuitive and easy to use. It is aesthetically pleasing and provides 
 
 We learned about different steps to gauge what first aid to administer, and we learned that mental health crises are hard to tackle because there is a lot of ambiguity around when to call 911.
 
-## What's next for Samaritan
+## What’s next for Samaritan
 
 We want to deploy the app for testing and receive feedback.
 
